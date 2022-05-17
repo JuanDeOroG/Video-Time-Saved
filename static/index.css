@@ -1,0 +1,42 @@
+body{
+    float: left;
+    margin: 0% 15% 0 15%;
+    background-color: aquamarine;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+section{
+    float: left;
+    font-size: 20px;
+}
+
+form{
+    font-size: 25px;
+    float: left;
+    
+
+}
+
+form input{
+    margin: 10px;
+    height: 24px;
+    
+}
+
+.sec2{
+    background-color: black;
+    border: 1px solid cornflowerblue;
+    border-radius: 20px;
+    font-size: 21px;
+    float: left;
+    padding: 0 10px 0 10px;
+    margin: 0;
+    color: white;
+    
+}
+
+
+.sec2 h2{
+    font-size: 25px;
+}

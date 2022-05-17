@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved time</title>
+    <link rel="stylesheet" href="{% static '/index.css'%}">
+</head>
+<body>
+    <div class="cuerpo">
+    <section>
+        <h1>Do you want to know the time you saved?</h1>
+        <p>Many times when watching a video or listening to an audio and we want to spend as little time as possible, we increase the playback speed in order to reduce the time we spend. But what we don't know is exactly how much time we can save by playing content at a certain speed. This is what SAVED TIME was created for.</p>
+
+    </section>
+        
+        <form action="{% url 'enviado' %}" method="POST">{% csrf_token %}
+
+            <label for="hours">Enter the hours (no required):</label>
+            <input type="number" placeholder="Hours" id="hours" name="hours"><br>
+
+            <label for="minutes">Enter the minutes:</label>
+            <input type="number" placeholder="Minutes" id="minutes" name="minutes" required> <br>
+
+            <label for="speed">Enter the speed:</label>
+            <input type="text" placeholder="speed" id="speed" name="speed" required>
+            
+            <input type="submit" value="Calculate">
+        </form>
+
+
+        {% block content %} {% endblock %}
+
+
+ 
+    </div>
+</body>
+</html>
